@@ -126,7 +126,7 @@ object Huffman {
       * unchanged.
       */
     def combine(trees: List[CodeTree]): List[CodeTree] = {
-        if (trees.size < 2) return trees
+        if (trees.size < 2) trees
         else List(makeCodeTree(trees.head,trees.tail.head)) ::: trees.tail.tail
     }
 
@@ -172,7 +172,16 @@ object Huffman {
       * This function decodes the bit sequence `bits` using the code tree `tree` and returns
       * the resulting list of characters.
       */
-    def decode(tree: CodeTree, bits: List[Bit]): List[Char] = ???
+    def decode(tree: CodeTree, bits: List[Bit]): List[Char] = {
+        def decodeHelper(t:CodeTree,bits:List[Bit]):List[Char] = {
+            if(bits == List()) List()
+            else if (t.isInstanceOf[Leaf]) List(t.asInstanceOf[Leaf].char) ::: decodeHelper(tree,bits)
+            else if (bits.head == 1) decodeHelper(t.asInstanceOf[Fork].right,bits.tail)
+            else decodeHelper(t.asInstanceOf[Fork].left,bits.tail)
+        }
+        decodeHelper(tree,bits)
+    }
+
 
     /**
       * A Huffman coding tree for the French language.
@@ -190,7 +199,7 @@ object Huffman {
     /**
       * Write a function that returns the decoded secret
       */
-    def decodedSecret: List[Char] = ???
+    def decodedSecret: List[Char] = decode(frenchCode,secret)
 
 
     // Part 4a: Encoding using Huffman tree
@@ -199,7 +208,20 @@ object Huffman {
       * This function encodes `text` using the code tree `tree`
       * into a sequence of bits.
       */
-    def encode(tree: CodeTree)(text: List[Char]): List[Bit] = ???
+    def encode(tree: CodeTree)(text: List[Char]): List[Bit] = {
+
+        def encodeHelper(t:CodeTree,text:List[Char],code:List[Bit]):List[Bit] = {
+            if(text == List()) code
+            else if(t.isInstanceOf[Leaf] )
+                if(t.asInstanceOf[Leaf].char == text.head)  encodeHelper(tree,text.tail,code)
+                else encodeHelper(tree,text.tail,List())
+            else encodeHelper(t.asInstanceOf[Fork].left,text,code:::List(0)) :::
+                    encodeHelper(t.asInstanceOf[Fork].right,text,code:::List(1))
+        }
+
+        encodeHelper(tree,text,List())
+    }
+
 
     // Part 4b: Encoding using code table
 
