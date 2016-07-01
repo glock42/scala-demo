@@ -125,9 +125,9 @@ object Huffman {
       * If `trees` is a list of less than two elements, that list should be returned
       * unchanged.
       */
-    def combine(trees: List[CodeTree]): List[CodeTree] = {
-        if (trees.size < 2) trees
-        else List(makeCodeTree(trees.head,trees.tail.head)) ::: trees.tail.tail
+    def combine(trees: List[CodeTree]): List[CodeTree] = trees match {
+        case left :: right :: cs => (makeCodeTree(left, right) :: cs).sortBy(weight)
+        case _ => trees
     }
 
     /**
@@ -177,9 +177,11 @@ object Huffman {
             if(bits == List()) List()
             else if (t.isInstanceOf[Leaf]) List(t.asInstanceOf[Leaf].char) ::: decodeHelper(tree,bits)
             else if (bits.head == 1) decodeHelper(t.asInstanceOf[Fork].right,bits.tail)
-            else decodeHelper(t.asInstanceOf[Fork].left,bits.tail)
+            else if (bits.head == 0) decodeHelper(t.asInstanceOf[Fork].left,bits.tail)
+            else List()
         }
-        decodeHelper(tree,bits)
+
+        decodeHelper(tree,bits:::List(-1))
     }
 
 
@@ -214,9 +216,12 @@ object Huffman {
             if(text == List()) code
             else if(t.isInstanceOf[Leaf] )
                 if(t.asInstanceOf[Leaf].char == text.head)  encodeHelper(tree,text.tail,code)
-                else encodeHelper(tree,text.tail,List())
-            else encodeHelper(t.asInstanceOf[Fork].left,text,code:::List(0)) :::
-                    encodeHelper(t.asInstanceOf[Fork].right,text,code:::List(1))
+                else List()
+            else {
+                val left = encodeHelper(t.asInstanceOf[Fork].left,text,code:::List(0))
+                if (left == List()) encodeHelper(t.asInstanceOf[Fork].right,text,code:::List(1))
+                else left
+            }
         }
 
         encodeHelper(tree,text,List())
@@ -231,7 +236,11 @@ object Huffman {
       * This function returns the bit sequence that represents the character `char` in
       * the code table `table`.
       */
-    def codeBits(table: CodeTable)(char: Char): List[Bit] = ???
+    def codeBits(table: CodeTable)(char: Char): List[Bit] = {
+        if (table == List()) List()
+        else if (table.head._1 == char) table.head._2
+        else codeBits(table.tail)(char)
+    }
 
     /**
       * Given a code tree, create a code table which contains, for every character in the
@@ -241,7 +250,15 @@ object Huffman {
       * a valid code tree that can be represented as a code table. Using the code tables of the
       * sub-trees, think of how to build the code table for the entire tree.
       */
-    def convert(tree: CodeTree): CodeTable = ???
+    def convert(tree: CodeTree): CodeTable = {
+        def convertHelper(t:CodeTree,code:List[Bit]):CodeTable = {
+            if(t.isInstanceOf[Leaf] )
+                List((t.asInstanceOf[Leaf].char,code))
+            else convertHelper(t.asInstanceOf[Fork].left,code:::List(0)) :::
+                    convertHelper(t.asInstanceOf[Fork].right,code:::List(1))
+        }
+        convertHelper(tree,List())
+    }
 
     /**
       * This function takes two code tables and merges them into one. Depending on how you
@@ -256,5 +273,14 @@ object Huffman {
       * To speed up the encoding process, it first converts the code tree to a code table
       * and then uses it to perform the actual encoding.
       */
-    def quickEncode(tree: CodeTree)(text: List[Char]): List[Bit] = ???
+    def quickEncode(tree: CodeTree)(text: List[Char]): List[Bit] = {
+        val table = convert(tree)
+        def quickEncodeHelper(codeTable: CodeTable, text: List[Char], bits: List[Bit]): List[Bit] = {
+            if (text == List()) bits
+            else if(codeTable.head._1 == text.head)
+                quickEncodeHelper(table,text.tail,bits:::codeTable.head._2)
+            else quickEncodeHelper(codeTable.tail,text,bits)
+        }
+        quickEncodeHelper(table,text,List())
+    }
 }

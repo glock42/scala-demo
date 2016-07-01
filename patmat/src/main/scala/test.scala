@@ -1,10 +1,12 @@
 import patmat.Huffman
+import patmat.Huffman._
 
 /**
   * Created by "Threezj" on 16-6-30.
   */
 object test {
     def main(args: Array[String]) {
-        println(Huffman.times(Huffman.string2Chars("aba")))
+        println(encode(frenchCode)("xaxa".toList))
+        println(quickEncode(Huffman.frenchCode)("xaxa".toList))
     }
 }
