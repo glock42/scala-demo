@@ -1,0 +1,64 @@
+[0m[[0mdebug[0m] [0m[0m
+[0m[[0mdebug[0m] [0mInitial source changes: [0m
+[0m[[0mdebug[0m] [0m	removed:Set()[0m
+[0m[[0mdebug[0m] [0m	added: Set(/home/asus/dev/scala-project/forcomp/src/main/scala/forcomp/test.scala, /home/asus/dev/scala-project/forcomp/src/main/scala/forcomp/package.scala, /home/asus/dev/scala-project/forcomp/src/main/scala/forcomp/Anagrams.scala, /home/asus/dev/scala-project/forcomp/src/main/scala/common/package.scala)[0m
+[0m[[0mdebug[0m] [0m	modified: Set()[0m
+[0m[[0mdebug[0m] [0mInvalidated products: Set()[0m
+[0m[[0mdebug[0m] [0mExternal API changes: API Changes: Set()[0m
+[0m[[0mdebug[0m] [0mModified binary dependencies: Set()[0m
+[0m[[0mdebug[0m] [0mInitial directly invalidated sources: Set(/home/asus/dev/scala-project/forcomp/src/main/scala/forcomp/test.scala, /home/asus/dev/scala-project/forcomp/src/main/scala/forcomp/package.scala, /home/asus/dev/scala-project/forcomp/src/main/scala/forcomp/Anagrams.scala, /home/asus/dev/scala-project/forcomp/src/main/scala/common/package.scala)[0m
+[0m[[0mdebug[0m] [0m[0m
+[0m[[0mdebug[0m] [0mSources indirectly invalidated by:[0m
+[0m[[0mdebug[0m] [0m	product: Set()[0m
+[0m[[0mdebug[0m] [0m	binary dep: Set()[0m
+[0m[[0mdebug[0m] [0m	external source: Set()[0m
+[0m[[0mdebug[0m] [0mAll initially invalidated sources: Set(/home/asus/dev/scala-project/forcomp/src/main/scala/forcomp/test.scala, /home/asus/dev/scala-project/forcomp/src/main/scala/forcomp/package.scala, /home/asus/dev/scala-project/forcomp/src/main/scala/forcomp/Anagrams.scala, /home/asus/dev/scala-project/forcomp/src/main/scala/common/package.scala)[0m
+[0m[[0mdebug[0m] [0mRecompiling all 4 sources: invalidated sources (4) exceeded 50.0% of all sources[0m
+[0m[[0minfo[0m] [0mCompiling 4 Scala sources to /home/asus/dev/scala-project/forcomp/target/scala-2.11/classes...[0m
+[0m[[0mdebug[0m] [0mGetting compiler-interface from component compiler for Scala 2.11.7[0m
+[0m[[0mdebug[0m] [0mGetting compiler-interface from component compiler for Scala 2.11.7[0m
+[0m[[0mdebug[0m] [0mRunning cached compiler 3b1b549b, interfacing (CompilerInterface) with Scala compiler version 2.11.7[0m
+[0m[[0mdebug[0m] [0mCalling Scala compiler with arguments  (CompilerInterface):[0m
+[0m[[0mdebug[0m] [0m	-deprecation[0m
+[0m[[0mdebug[0m] [0m	-bootclasspath[0m
+[0m[[0mdebug[0m] [0m	/usr/lib/jvm/java-8-oracle/jre/lib/resources.jar:/usr/lib/jvm/java-8-oracle/jre/lib/rt.jar:/usr/lib/jvm/java-8-oracle/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jsse.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jce.jar:/usr/lib/jvm/java-8-oracle/jre/lib/charsets.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jfr.jar:/usr/lib/jvm/java-8-oracle/jre/classes:/home/asus/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.7.jar[0m
+[0m[[0mdebug[0m] [0m	-classpath[0m
+[0m[[0mdebug[0m] [0m	/home/asus/dev/scala-project/forcomp/target/scala-2.11/classes:/home/asus/.ivy2/cache/org.scalatest/scalatest_2.11/bundles/scalatest_2.11-2.2.4.jar:/home/asus/.ivy2/cache/org.scala-lang/scala-reflect/jars/scala-reflect-2.11.2.jar:/home/asus/.ivy2/cache/org.scala-lang.modules/scala-xml_2.11/bundles/scala-xml_2.11-1.0.2.jar:/home/asus/.ivy2/cache/org.scala-lang.modules/scala-parser-combinators_2.11/bundles/scala-parser-combinators_2.11-1.0.4.jar[0m
+[0m[[0mdebug[0m] [0mScala compilation took 5.885127134 s[0m
+[0m[[0mdebug[0m] [0mInvalidating /home/asus/dev/scala-project/forcomp/src/main/scala/forcomp/test.scala...[0m
+[0m[[0mdebug[0m] [0mInvalidating (transitively) by inheritance from /home/asus/dev/scala-project/forcomp/src/main/scala/forcomp/test.scala...[0m
+[0m[[0mdebug[0m] [0mInitial set of included nodes: Set(/home/asus/dev/scala-project/forcomp/src/main/scala/forcomp/test.scala)[0m
+[0m[[0mdebug[0m] [0mInvalidated by transitive inheritance dependency: Set(/home/asus/dev/scala-project/forcomp/src/main/scala/forcomp/test.scala)[0m
+[0m[[0mdebug[0m] [0mThe /home/asus/dev/scala-project/forcomp/src/main/scala/forcomp/test.scala source file has the following regular definitions changed:[0m
+[0m[[0mdebug[0m] [0m	notify, test, wait, $asInstanceOf, equals, asInstanceOf, synchronized, $isInstanceOf, main, notifyAll, isInstanceOf, ==, clone, toString, !=, getClass, ne, eq, ##, finalize, hashCode.[0m
+[0m[[0mdebug[0m] [0mAll member reference dependencies will be considered within this context.[0m
+[0m[[0mdebug[0m] [0mInvalidating /home/asus/dev/scala-project/forcomp/src/main/scala/forcomp/package.scala...[0m
+[0m[[0mdebug[0m] [0mInvalidating (transitively) by inheritance from /home/asus/dev/scala-project/forcomp/src/main/scala/forcomp/package.scala...[0m
+[0m[[0mdebug[0m] [0mInitial set of included nodes: Set(/home/asus/dev/scala-project/forcomp/src/main/scala/forcomp/package.scala)[0m
+[0m[[0mdebug[0m] [0mInvalidated by transitive inheritance dependency: Set(/home/asus/dev/scala-project/forcomp/src/main/scala/forcomp/package.scala)[0m
+[0m[[0mdebug[0m] [0mThe /home/asus/dev/scala-project/forcomp/src/main/scala/forcomp/package.scala source file has the following regular definitions changed:[0m
+[0m[[0mdebug[0m] [0m	notify, package, wait, $asInstanceOf, equals, asInstanceOf, synchronized, $isInstanceOf, notifyAll, isInstanceOf, loadDictionary, ==, clone, toString, !=, getClass, ne, dictionaryPath, eq, ##, finalize, hashCode.[0m
+[0m[[0mdebug[0m] [0mAll member reference dependencies will be considered within this context.[0m
+[0m[[0mdebug[0m] [0mThe following modified names cause invalidation of /home/asus/dev/scala-project/forcomp/src/main/scala/forcomp/Anagrams.scala: Set(package, asInstanceOf, isInstanceOf, loadDictionary, ==, !=, ne)[0m
+[0m[[0mdebug[0m] [0mInvalidating /home/asus/dev/scala-project/forcomp/src/main/scala/forcomp/Anagrams.scala...[0m
+[0m[[0mdebug[0m] [0mInvalidating (transitively) by inheritance from /home/asus/dev/scala-project/forcomp/src/main/scala/forcomp/Anagrams.scala...[0m
+[0m[[0mdebug[0m] [0mInitial set of included nodes: Set(/home/asus/dev/scala-project/forcomp/src/main/scala/forcomp/Anagrams.scala)[0m
+[0m[[0mdebug[0m] [0mInvalidated by transitive inheritance dependency: Set(/home/asus/dev/scala-project/forcomp/src/main/scala/forcomp/Anagrams.scala)[0m
+[0m[[0mdebug[0m] [0mThe /home/asus/dev/scala-project/forcomp/src/main/scala/forcomp/Anagrams.scala source file has the following regular definitions changed:[0m
+[0m[[0mdebug[0m] [0m	notify, wait, $asInstanceOf, subtract, equals, dictionary, asInstanceOf, wordOccurrences, synchronized, $isInstanceOf, sentenceAnagrams, wordAnagrams, notifyAll, isInstanceOf, combinations, Occurrences, ==, clone, dictionaryByOccurrences, sentenceAnagramsOcc, toString, !=, sentenceOccurrences, getClass, ne, Anagrams, eq, Sentence, dico, Word, ##, finalize, hashCode.[0m
+[0m[[0mdebug[0m] [0mAll member reference dependencies will be considered within this context.[0m
+[0m[[0mdebug[0m] [0mThe following modified names cause invalidation of /home/asus/dev/scala-project/forcomp/src/main/scala/forcomp/test.scala: Set(Occurrences, Anagrams, Word)[0m
+[0m[[0mdebug[0m] [0mInvalidating /home/asus/dev/scala-project/forcomp/src/main/scala/common/package.scala...[0m
+[0m[[0mdebug[0m] [0mInvalidating (transitively) by inheritance from /home/asus/dev/scala-project/forcomp/src/main/scala/common/package.scala...[0m
+[0m[[0mdebug[0m] [0mInitial set of included nodes: Set(/home/asus/dev/scala-project/forcomp/src/main/scala/common/package.scala)[0m
+[0m[[0mdebug[0m] [0mInvalidated by transitive inheritance dependency: Set(/home/asus/dev/scala-project/forcomp/src/main/scala/common/package.scala)[0m
+[0m[[0mdebug[0m] [0mThe /home/asus/dev/scala-project/forcomp/src/main/scala/common/package.scala source file has the following regular definitions changed:[0m
+[0m[[0mdebug[0m] [0m	notify, package, wait, $asInstanceOf, equals, asInstanceOf, synchronized, $isInstanceOf, resourceAsStreamFromSrc, notifyAll, isInstanceOf, ???, ==, clone, subFile, toString, !=, getClass, ne, eq, ##, finalize, hashCode, ***.[0m
+[0m[[0mdebug[0m] [0mAll member reference dependencies will be considered within this context.[0m
+[0m[[0mdebug[0m] [0mThe following modified names cause invalidation of /home/asus/dev/scala-project/forcomp/src/main/scala/forcomp/package.scala: Set(package, resourceAsStreamFromSrc, getClass)[0m
+[0m[[0mdebug[0m] [0mNew invalidations:[0m
+[0m[[0mdebug[0m] [0m	Set()[0m
+[0m[[0mdebug[0m] [0mInitial set of included nodes: Set()[0m
+[0m[[0mdebug[0m] [0mPreviously invalidated, but (transitively) depend on new invalidations:[0m
+[0m[[0mdebug[0m] [0m	Set()[0m
+[0m[[0mdebug[0m] [0mAll newly invalidated sources after taking into account (previously) recompiled sources:Set()[0m
