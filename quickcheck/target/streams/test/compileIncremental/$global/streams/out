@@ -1,0 +1,49 @@
+[0m[[0mdebug[0m] [0m[0m
+[0m[[0mdebug[0m] [0mInitial source changes: [0m
+[0m[[0mdebug[0m] [0m	removed:Set()[0m
+[0m[[0mdebug[0m] [0m	added: Set(/home/asus/dev/scala-project/quickcheck/src/test/scala/quickcheck/QuickCheckSuite.scala, /home/asus/dev/scala-project/quickcheck/src/test/scala/quickcheck/test/Heap.scala)[0m
+[0m[[0mdebug[0m] [0m	modified: Set()[0m
+[0m[[0mdebug[0m] [0mInvalidated products: Set()[0m
+[0m[[0mdebug[0m] [0mExternal API changes: API Changes: Set()[0m
+[0m[[0mdebug[0m] [0mModified binary dependencies: Set()[0m
+[0m[[0mdebug[0m] [0mInitial directly invalidated sources: Set(/home/asus/dev/scala-project/quickcheck/src/test/scala/quickcheck/QuickCheckSuite.scala, /home/asus/dev/scala-project/quickcheck/src/test/scala/quickcheck/test/Heap.scala)[0m
+[0m[[0mdebug[0m] [0m[0m
+[0m[[0mdebug[0m] [0mSources indirectly invalidated by:[0m
+[0m[[0mdebug[0m] [0m	product: Set()[0m
+[0m[[0mdebug[0m] [0m	binary dep: Set()[0m
+[0m[[0mdebug[0m] [0m	external source: Set()[0m
+[0m[[0mdebug[0m] [0mAll initially invalidated sources: Set(/home/asus/dev/scala-project/quickcheck/src/test/scala/quickcheck/QuickCheckSuite.scala, /home/asus/dev/scala-project/quickcheck/src/test/scala/quickcheck/test/Heap.scala)[0m
+[0m[[0mdebug[0m] [0mRecompiling all 2 sources: invalidated sources (2) exceeded 50.0% of all sources[0m
+[0m[[0minfo[0m] [0mCompiling 2 Scala sources to /home/asus/dev/scala-project/quickcheck/target/scala-2.11/test-classes...[0m
+[0m[[0mdebug[0m] [0mGetting compiler-interface from component compiler for Scala 2.11.7[0m
+[0m[[0mdebug[0m] [0mGetting compiler-interface from component compiler for Scala 2.11.7[0m
+[0m[[0mdebug[0m] [0mRunning cached compiler 7624eba5, interfacing (CompilerInterface) with Scala compiler version 2.11.7[0m
+[0m[[0mdebug[0m] [0mCalling Scala compiler with arguments  (CompilerInterface):[0m
+[0m[[0mdebug[0m] [0m	-deprecation[0m
+[0m[[0mdebug[0m] [0m	-bootclasspath[0m
+[0m[[0mdebug[0m] [0m	/usr/lib/jvm/java-8-oracle/jre/lib/resources.jar:/usr/lib/jvm/java-8-oracle/jre/lib/rt.jar:/usr/lib/jvm/java-8-oracle/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jsse.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jce.jar:/usr/lib/jvm/java-8-oracle/jre/lib/charsets.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jfr.jar:/usr/lib/jvm/java-8-oracle/jre/classes:/home/asus/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.7.jar[0m
+[0m[[0mdebug[0m] [0m	-classpath[0m
+[0m[[0mdebug[0m] [0m	/home/asus/dev/scala-project/quickcheck/target/scala-2.11/test-classes:/home/asus/dev/scala-project/quickcheck/target/scala-2.11/classes:/home/asus/.ivy2/cache/org.scalatest/scalatest_2.11/bundles/scalatest_2.11-2.2.4.jar:/home/asus/.ivy2/cache/org.scala-lang/scala-reflect/jars/scala-reflect-2.11.2.jar:/home/asus/.ivy2/cache/org.scala-lang.modules/scala-xml_2.11/bundles/scala-xml_2.11-1.0.2.jar:/home/asus/.ivy2/cache/org.scalacheck/scalacheck_2.11/jars/scalacheck_2.11-1.12.1.jar:/home/asus/.ivy2/cache/org.scala-lang.modules/scala-parser-combinators_2.11/bundles/scala-parser-combinators_2.11-1.0.2.jar:/home/asus/.ivy2/cache/org.scala-sbt/test-interface/jars/test-interface-1.0.jar:/home/asus/.ivy2/cache/junit/junit/jars/junit-4.10.jar:/home/asus/.ivy2/cache/org.hamcrest/hamcrest-core/jars/hamcrest-core-1.1.jar[0m
+[0m[[0mdebug[0m] [0mScala compilation took 2.505819511 s[0m
+[0m[[0mdebug[0m] [0mInvalidating /home/asus/dev/scala-project/quickcheck/src/test/scala/quickcheck/QuickCheckSuite.scala...[0m
+[0m[[0mdebug[0m] [0mInvalidating (transitively) by inheritance from /home/asus/dev/scala-project/quickcheck/src/test/scala/quickcheck/QuickCheckSuite.scala...[0m
+[0m[[0mdebug[0m] [0mInitial set of included nodes: Set(/home/asus/dev/scala-project/quickcheck/src/test/scala/quickcheck/QuickCheckSuite.scala)[0m
+[0m[[0mdebug[0m] [0mInvalidated by transitive inheritance dependency: Set(/home/asus/dev/scala-project/quickcheck/src/test/scala/quickcheck/QuickCheckSuite.scala)[0m
+[0m[[0mdebug[0m] [0mThe /home/asus/dev/scala-project/quickcheck/src/test/scala/quickcheck/QuickCheckSuite.scala source file has the following implicit definitions changed:[0m
+[0m[[0mdebug[0m] [0m	arbHeap, unconstrainedEquality, convertToEqualizer, generatorDrivenConfig.[0m
+[0m[[0mdebug[0m] [0mAll member reference dependencies will be considered within this context.[0m
+[0m[[0mdebug[0m] [0mInvalidating /home/asus/dev/scala-project/quickcheck/src/test/scala/quickcheck/test/Heap.scala...[0m
+[0m[[0mdebug[0m] [0mInvalidating (transitively) by inheritance from /home/asus/dev/scala-project/quickcheck/src/test/scala/quickcheck/test/Heap.scala...[0m
+[0m[[0mdebug[0m] [0mInitial set of included nodes: Set(/home/asus/dev/scala-project/quickcheck/src/test/scala/quickcheck/test/Heap.scala)[0m
+[0m[[0mdebug[0m] [0mIncluding /home/asus/dev/scala-project/quickcheck/src/test/scala/quickcheck/QuickCheckSuite.scala by /home/asus/dev/scala-project/quickcheck/src/test/scala/quickcheck/test/Heap.scala[0m
+[0m[[0mdebug[0m] [0mInvalidated by transitive inheritance dependency: Set(/home/asus/dev/scala-project/quickcheck/src/test/scala/quickcheck/test/Heap.scala, /home/asus/dev/scala-project/quickcheck/src/test/scala/quickcheck/QuickCheckSuite.scala)[0m
+[0m[[0mdebug[0m] [0mThe /home/asus/dev/scala-project/quickcheck/src/test/scala/quickcheck/test/Heap.scala source file has the following regular definitions changed:[0m
+[0m[[0mdebug[0m] [0m	notify, unapply, curried, x, wait, copy$default$2, $asInstanceOf, empty, Bogus1BinomialHeap, insert, root, productArity, equals, Rank, Bogus4BinomialHeap, asInstanceOf, Bogus2BinomialHeap, rank, synchronized, deleteMin, A, Bogus5BinomialHeap, $isInstanceOf, Node, tupled, canEqual, productPrefix, notifyAll, readResolve, isInstanceOf, ins, <init>, apply, ==, clone, link, $init$, copy$default$3, copy, meld, toString, H, !=, c, BinomialHeap, getClass, copy$default$1, r, isEmpty, Bogus3BinomialHeap, ne, findMin, eq, productIterator, ord, ##, finalize, productElement, hashCode.[0m
+[0m[[0mdebug[0m] [0mAll member reference dependencies will be considered within this context.[0m
+[0m[[0mdebug[0m] [0mThe following modified names cause invalidation of /home/asus/dev/scala-project/quickcheck/src/test/scala/quickcheck/QuickCheckSuite.scala: Set(Bogus1BinomialHeap, Bogus4BinomialHeap, Bogus2BinomialHeap, Bogus5BinomialHeap, <init>, BinomialHeap, Bogus3BinomialHeap)[0m
+[0m[[0mdebug[0m] [0mNew invalidations:[0m
+[0m[[0mdebug[0m] [0m	Set()[0m
+[0m[[0mdebug[0m] [0mInitial set of included nodes: Set()[0m
+[0m[[0mdebug[0m] [0mPreviously invalidated, but (transitively) depend on new invalidations:[0m
+[0m[[0mdebug[0m] [0m	Set()[0m
+[0m[[0mdebug[0m] [0mAll newly invalidated sources after taking into account (previously) recompiled sources:Set()[0m
